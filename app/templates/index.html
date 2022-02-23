@@ -1,11 +1,19 @@
-
+{% import 'macros.html' as macro%}
 <body>
-    #!__ Popular movie section _->
-    <h3> Popular Movies</h3>
-    <ul>
-        {% for popular_movie in popular%}
-        <li>{{ popular_movie.title}}</li>
-        {% endfor%}
-    </ul>
-
+      <body>
+        <!-- Popular movie -->
+        <h3> Popular Movies</h3>
+        <ul>
+            {{ macro.displayMovieList(popular)}}
+        </ul>
+        <!-- Upcoming movie  -->
+        <h3> Upcoming Movies </h3>
+        <ul>
+            {{ macro.displayMovieList(upcoming)}}
+        </ul>
+        <!-- Now showing movie -->
+        <h3>Now Showing</h3>
+        <ul>
+            {{ macro.displayMovieList(now_showing)}}
+        </ul>
 </body>
