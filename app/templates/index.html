@@ -1,6 +1,7 @@
-{% import 'macros.html' as macro%}
-<body>
-      <body>
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+        {% block content %}
         <!-- Popular movie -->
         <h3> Popular Movies</h3>
         <ul>
@@ -18,4 +19,5 @@
             
 
         </ul>
-</body>
+        {% endblock %}
+        
